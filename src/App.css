@@ -45,6 +45,7 @@ h1 img  {
   flex-wrap: wrap;
   align-items: flex-start;
   padding:30px;
+  margin-top:-5%
 }
 
 .bitcard img {
