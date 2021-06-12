@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <div className="bitheader">
-        <div><h1><img style={{width:'90px'}} alt='' src={logo}/> Crazy Coins</h1></div>
+        <div><h1><img style={{width:'15%'}} alt='' src={logo}/> Crazy Coins</h1></div>
         <div id="reloadBtn" onClick={()=>{setReload(!reload)}} style={{marginLeft:'20px', paddingBottom:'17.5px'}}>
             <img style={{width:'40px'}} alt='' src={refresh}/></div>
       </div>
