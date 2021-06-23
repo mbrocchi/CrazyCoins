@@ -1,2 +1,2 @@
 Crazy Coins 
-Programmed by Marcello Brocchi
+as featured on Chino Does Stuff
