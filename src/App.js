@@ -3,20 +3,20 @@ import './App.css';
 import Card from './Card'
 import logo from './bitcoin.png'
 import refresh from './refresh.png'
-import bolt from './bolt.gif'
+import loader from './loader.gif'
 
 function App() {
 
   const [items, setItems] = useState([]);
   const [reload, setReload] = useState(true);
-  const [imageView, imageVisible] = useState(true)
+  const [loaderView, loaderVisible] = useState(true)
 
   const getCoins = () => {
     setItems([]);
-    imageVisible(true);
+    loaderVisible(true);
     fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=20&currency=AUD').then (     
         (response) => {
-          imageVisible(false);
+          loaderVisible(false);
               response.json().then (
                 (result) => {
                   setItems(result.coins);
@@ -39,10 +39,8 @@ function App() {
         <div id="reloadBtn" onClick={()=>{setReload(!reload)}} style={{marginLeft:'20px', paddingBottom:'17.5px'}}>
             <img style={{width:'40px'}} alt='' src={refresh}/></div>
       </div>
-      {
-        
-      }
-     { imageView && <div style={{display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}><img style={{width:'200px', height:'200px'}} alt='' src={bolt}/></div> }
+
+     { loaderView && <div style={{display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}><img style={{width:'200px', height:'200px'}} alt='' src={loader}/></div> }
       <div className="bitcards">
           {      
             items.map( item => (        
